@@ -9,6 +9,7 @@
   --border-bg: #c3becb;
   --header-bg: #434371;
   --cta-color: #edce6f;
+  --exit-color: #ed6f6f;
 }
 
 body {
@@ -74,6 +75,38 @@ header a:hover {
   border: 2px solid var(--cta-color);
 }
 
+/*Filter button that's only on smaller screens------------------------------*/
+.mobile-only-filter-area {
+  padding: 10px;
+  box-shadow: 0px 5px 33px -25px var(--header-bg);
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-filter {
+  width: 300px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px solid var(--header-bg);
+  border-radius: 11px;
+  background: var(--header-bg);
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mobile-filter:hover {
+  background: #fff;
+  border-color: var(--header-bg);
+  color: var(--header-bg);
+}
+
 /*Side Filters-----------------------------------*/
 
 .content {
@@ -82,26 +115,26 @@ header a:hover {
   height: 100%;
 }
 
-.content .burger {
-  height: 50px;
-  width: 50px;
-  z-index: 2;
-  display: flex;
-  visibility: collapse;
-  align-items: center;
-  justify-content: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .content .side-bar {
   width: 265px;
   height: 100%;
   padding: 20px 0 0 9px;
   display: flex;
   flex-direction: column;
+}
+
+/*mobile only "close button"*/
+.content .side-bar .mobile-filter {
+  background: var(--exit-color);
+  border-color: var(--exit-color);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.content .side-bar .mobile-filter:hover {
+  background: #fff;
+  color: var(--exit-color);
 }
 
 .side-bar .min-max {
@@ -248,19 +281,24 @@ main {
 
 @media (width <=700px) {
   header h3 {
-    margin-left: 40px;
+    font-size: 1rem;
+  }
+  
+  header form {
+    margin: 0 8px;
   }
 
   header form input {
     width: 200px;
   }
 
-  .content .burger {
-    visibility: visible;
+  .mobile-filter {
+    display: flex;
   }
 
-  .content .side-bar {   
+  .content .side-bar {
     width: 270px;
+    width: 75%;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -269,7 +307,6 @@ main {
     padding: 20px 9px;
     background: #97929f;
     overflow-y: scroll;
-    padding-top: 60px;
 
     transition-property: translate, opacity, visibility;
     transition-duration: 0.5s;
@@ -296,8 +333,6 @@ main {
   }
 
   .product-card {
-    width: 300px
+    width: 300px;
   }
-
-
 }

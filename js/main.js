@@ -10,7 +10,7 @@ const yearMin = document.getElementById("year-min-input");
 const yearMax = document.getElementById("year-max-input");
 const mileageMax = document.getElementById("mileage-input");
 
-const burgerBtn = document.getElementById("burger-btn");
+const filterBtns = document.querySelectorAll("#filter-btn");
 
 //Fills the filter sidebar based on the attributes of usedCars===========================
 
@@ -229,9 +229,13 @@ function checkHandler(event) {
 
 carMakeList.addEventListener("change", checkHandler);
 carColorList.addEventListener("change", checkHandler);
-burgerBtn.onclick = function () {
-  document.body.classList.toggle("open");
-};
+
+//gets the mobile only "filter" and "close" buttons
+Array.from(filterBtns).map((element) => element.onclick = function() {
+  document.body.classList.toggle("open")
+}
+);
+
 //gets each "Go" button and makes them do the same thing
 const blue = document.querySelectorAll("#filter-form");
 Array.from(blue).map((element) =>

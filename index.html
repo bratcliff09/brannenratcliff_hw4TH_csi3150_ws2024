@@ -26,10 +26,21 @@
       <a href="">Contact Us</a>
     </header>
 
-    <div class="content">
-      <button class="burger material-symbols-outlined" id="burger-btn" aria-label="Filter menu button">menu</button>
+    <!--Where the filter hamburger menu appears on smaller screens-->
+    <div class="mobile-only-filter-area">
+      <button id="filter-btn" aria-label="Filter menu button" class="mobile-filter">
+        <span class="material-symbols-outlined">tune</span>
+        Filter
+      </button>
+    </div>
 
+    <div class="content">
       <aside class="side-bar">
+        <button id="filter-btn" aria-label="Close filter menu button" class="mobile-filter">
+          <span class="material-symbols-outlined">close</span>
+          Close
+        </button>
+
         <p>Price:</p>
         <div class="min-max">
             <form action="" id="filter-form" >
