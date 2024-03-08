@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bran's Used Cars</title>
+
+    <link rel="stylesheet" href="\css\styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script src="\js\main.js" defer></script>
+    <script src="\js\usedCars.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h3>BRAN'S USED CARS</h3>
+      <form action="" id="search-form">
+        <input type="text" name="" id="" placeholder="Search vehicle" />
+        <button type="submit">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </form>
+      <a href="">Contact Us</a>
+    </header>
+
+    <div class="content">
+      <button class="burger material-symbols-outlined" id="burger-btn">menu</button>
+
+      <aside class="side-bar">
+        <p>Price:</p>
+        <div class="min-max">
+            <form action="" id="filter-form" >
+                <input type="text" id="price-min-input" placeholder="Min" />
+                <input type="text" id="price-max-input" placeholder="Max" />
+                <button type="submit" class="input-btn" id="go-btn">Go</button>
+            </form>
+        </div>
+
+        <p>Year:</p>
+        <div class="min-max">
+            <form action="" id="filter-form">
+                <input type="text" id="year-min-input" placeholder="Min" />
+                <input type="text" id="year-max-input" placeholder="Max" />
+                <button type="submit" class="input-btn" id="go-btn" aria-label="Filter cars button">Go</button>
+            </form>
+        </div>
+
+        <p>Max Milage:</p>
+        <div class="min-max">
+            <form action="" id="filter-form" name="">
+                <input type="text" id="mileage-input" placeholder="e.g. 9000" />
+                <button type="submit" class="input-btn" id="go-btn">Go</button>
+            </form>
+        </div>
+
+        <p>Car Make:</p>
+        <div class="checkbox-list" id="car-make-list">
+          <ul id="car-make-ul">
+            <!-- template
+            <li>
+              <label for="anId">carBrand</label>
+              <input type="checkbox" id="anId" name="carBrand" />
+            </li>
+            -->
+          </ul>
+        </div>
+
+        <p>Colors:</p>
+        <div class="checkbox-list" id="car-color">
+          <ul id="car-color-ul">
+            <!-- template
+            <li>
+              <label for="anId">carColor</label>
+              <input type="checkbox" id="anId" name="carColor" />
+            </li>
+            -->
+          </ul>
+        </div>
+      </aside>
+
+      <!--Where you put the cars at-->
+      <main id="result">
+        <!-- template -->
+        <div class="product-card">
+          <img src=".\assets\img\carPlaceHolder.jpg" alt="image of a car" />
+          <div class="top">
+            <span>
+              <p>2019 Toyota</p>
+            </span>
+            <p>Carolla</p>
+            <p>$125000</p>
+          </div>
+          <div class="mid">
+            <p>More Info:</p>
+            <div class="more-info">
+              <p>Color: Teal</p>
+              <p>Milage: 35000</p>
+              <p>Gas Milage: 28 mpg city, 38 mpg highway</p>
+            </div>
+          </div>
+          <div class="bot">
+            <button>Buy Now</button>
+            <button>More Details</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+
+  </body>
+</html>
