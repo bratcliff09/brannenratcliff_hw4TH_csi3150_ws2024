@@ -1,4 +1,4 @@
-import usedCars from "/usedCars.js";
+import usedCars from "./usedCars.js";
 
 const result = document.getElementById("result");
 const carMakeList = document.getElementById("car-make-ul");
