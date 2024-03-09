@@ -107,7 +107,7 @@ header a:hover {
   color: var(--header-bg);
 }
 
-/*Side Filters-----------------------------------*/
+/*Sidebar Filters-----------------------------------*/
 
 .content {
   display: flex;
@@ -136,6 +136,7 @@ header a:hover {
   background: #fff;
   color: var(--exit-color);
 }
+/*--mobile only ends----*/
 
 .side-bar .min-max {
   margin-left: 25px;

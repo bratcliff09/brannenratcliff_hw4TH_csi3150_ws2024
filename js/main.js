@@ -1,4 +1,4 @@
-import usedCars from './usedCars.js';
+import usedCars from "./usedCars.js";
 
 const result = document.getElementById("result");
 const carMakeList = document.getElementById("car-make-ul");
@@ -208,7 +208,7 @@ function mainFilter() {
   return a;
 }
 
-function goForItTwo() {
+function clearAndShowResults() {
   clearResult();
   showResult();
 }
@@ -224,16 +224,18 @@ function resetOnLoad() {
 }
 
 function checkHandler(event) {
-  goForItTwo();
+  clearAndShowResults();
 }
 
 carMakeList.addEventListener("change", checkHandler);
 carColorList.addEventListener("change", checkHandler);
 
-//gets the mobile only "filter" and "close" buttons
-Array.from(filterBtns).map((element) => element.onclick = function() {
-  document.body.classList.toggle("open")
-}
+//gets the mobile-only "filter" and "close" buttons
+Array.from(filterBtns).map(
+  (element) =>
+    (element.onclick = function () {
+      document.body.classList.toggle("open");
+    })
 );
 
 //gets each "Go" button and makes them do the same thing
@@ -241,7 +243,7 @@ const blue = document.querySelectorAll("#filter-form");
 Array.from(blue).map((element) =>
   element.addEventListener("submit", function (event) {
     event.preventDefault();
-    goForItTwo();
+    clearAndShowResults();
   })
 );
 
@@ -249,6 +251,6 @@ async function init() {
   resetOnLoad();
   addCarMakes();
   addCarColors();
-  goForItTwo();
+  clearAndShowResults();
 }
 init();
